@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Math Ninja</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link href="https://fonts.cdnfonts.com/css/ninja-naruto" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container menu-container">
+      <header class="game-header">
+        <h1 class="title">
+          <div class="logo-container">
+            <img src="img/logo.png" alt="Ninja Logo" class="ninja-logo" />
+            <span class="logo-text">Math Ninja</span>
+          </div>
+        </h1>
+      </header>
+
+      <main class="menu-content">
+        <div class="input-group">
+          <label for="playerName">Nama:</label>
+          <input type="text" id="playerName" class="form-input" required placeholder="Masukkan namamu" />
+        </div>
+
+        <div class="input-group">
+          <label for="levelSelect">Level:</label>
+          <select id="levelSelect" class="form-select">
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+          </select>
+        </div>
+
+        <button class="btn primary-btn start-btn" onclick="startGame()">Mulai Game</button>
+
+        <section class="score-history">
+          <div class="history-header">
+            <h2>Riwayat Skor</h2>
+            <button class="btn danger-btn" onclick="clearScoreHistory()">Hapus</button>
+          </div>
+          <div id="scoreHistory" class="history-list"></div>
+        </section>
+      </main>
+    </div>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

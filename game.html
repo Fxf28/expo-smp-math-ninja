@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Math Ninja</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container game-container">
+      <header class="game-header">
+        <div class="game-info">
+          <div class="info-item player-name" id="playerNameDisplay">Nama Pemain</div>
+          <div class="info-item score" id="score">Skor: 0</div>
+          <div class="info-item lives" id="lives">❤️ x3</div>
+          <div class="info-item timer" id="timer">⏱️ 5</div>
+        </div>
+      </header>
+
+      <main class="game-main">
+        <div class="question-box fade" id="questionBox">
+          <h2 id="question" class="question-text">Soal akan muncul di sini</h2>
+          <div id="choices" class="choices-grid"></div>
+        </div>
+
+        <div id="message" class="message-box"></div>
+      </main>
+    </div>
+
+    <audio id="correctSound" src="sounds/correct.mp3"></audio>
+    <audio id="wrongSound" src="sounds/wrong.mp3"></audio>
+
+    <div id="gameOverPopup" class="popup">
+      <div class="popup-content">
+        <h3>Game Over!</h3>
+        <p id="finalScore" class="final-score"></p>
+        <div class="popup-buttons">
+          <button class="btn secondary-btn" onclick="restartGame()">🔁 Ulangi</button>
+          <button class="btn primary-btn" onclick="goToMenu()">🏠 Menu</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/game.js"></script>
+  </body>
+</html>
